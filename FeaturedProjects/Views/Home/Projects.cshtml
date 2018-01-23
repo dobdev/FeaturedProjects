@@ -1,0 +1,26 @@
+﻿@{
+    ViewBag.Title = "Projetos";
+}
+
+<div class="row">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Nome do Repositório</th>
+                <th>Autor</th>
+            </tr>
+        </thead>
+        <tbody>
+            @{
+                foreach (var item in ViewBag.Repositories)
+                {
+                    <tr>
+                        <td><a href="@item.ProjectLink">@item.ProjectName</a></td>
+                        <td>@item.ProductOwner</td>
+                    </tr>
+                }
+            }
+        </tbody>
+
+    </table>
+</div>

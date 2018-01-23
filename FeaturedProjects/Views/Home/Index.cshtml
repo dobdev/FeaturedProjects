@@ -1,0 +1,39 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>Bem vindo!</h1>
+    <p class="lead">
+        Essa é uma aplicação capaz de listar repositórios em destaque no GitHub, para isso elenquei 5 linguagens de 
+        programação listadas abaixo, ao clicar em alguma delas você será direcionado para a página contendo os principais
+        projetos desta linguagem no github.
+    </p>
+    <p>
+        Para que a aplicação funcione corretamente é necessário que você sincronize os projetos GitHub através do botão abaixo.
+    </p>
+    <button data-toggle="modal" data-target=".bs-example-modal-sm" class="btn btn-primary btn-lg" onclick="sync()">Sincronizar &raquo;</button>
+</div>
+
+
+<div class="row">
+    <div class="col-md-6 col-md-offset-2">
+        <a href="~/Home/Projects?lang=1" class="btn btn-default col-md-2">Javascript</a>
+        <a href="~/Home/Projects?lang=2" class="btn btn-default col-md-2">C#</a>
+        <a href="~/Home/Projects?lang=3" class="btn btn-default col-md-2">Python</a>
+        <a href="~/Home/Projects?lang=4" class="btn btn-default col-md-2">Java</a>
+        <a href="~/Home/Projects?lang=5" class="btn btn-default col-md-2">Kotlin</a>
+    </div>
+</div>
+
+<div  id="modal-loading" class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+    <div class="modal-dialog modal-sm" role="document">
+        <div class="modal-content">
+            <center>
+                <h1>Carregando...</h1>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/b/b1/Loading_icon.gif" />
+            </center>
+        </div>
+    </div>
+</div>
+
