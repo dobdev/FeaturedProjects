@@ -40,7 +40,7 @@ namespace FeaturedProjects.Models.Github
                 };
                 var response = await _client.Search.SearchRepo(request);
 
-                var result = response.Items.Take(100);
+                var result = response.Items.Take(25);
 
                 _projects.AddRange(result.Select(a => new Project
                 {
